@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a314929406e6c5489ebd9e939ad75cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 8ee73779ae2f000478d91d6fb26db037, type: 2}
 --- !u!1 &181158214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,10 +2486,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: abf0b8e486c60614594571d0a0470348, type: 3}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2497,7 +2497,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dialogue Text will be rendered here
+  m_Text: Dialogue Text will be rendered here. Dialogue Text will be rendered here.
+    Dialogue Text will be rendered here. Dialogue Text will be rendered here
 --- !u!222 &1533261618
 CanvasRenderer:
   m_ObjectHideFlags: 0
