@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 /// <summary>
 /// The register can be clicked to display purchase information
@@ -60,10 +61,15 @@ public class Register : Interactable {
         string purchases = "You are going to purchase ";
 
         ItemData[] items = counter.GetAllCurrentItems();
-        foreach (ItemData item in items)
+        List<string> itemNames = new List<string>();
+        foreach (var item in items)
         {
-            purchases += item.itemName + ", ";
+            itemNames.Add(item.itemName);
         }
+
+        //add commas to the items string and a period
+        string itemsString = Commaize(itemNames);
+        purchases += itemsString + ".";
 
         //format the price float ###,###.##
         string formattedPrice = totalPrice.ToString("N");
@@ -98,5 +104,19 @@ public class Register : Interactable {
         //display the dialogue
         dialogue.LoadDialogueScene(scene);
         dialogue.EnterDialogue();
+    }
+
+    //provided by Thomas Levesque (https://stackoverflow.com/questions/4239858/a-better-way-to-comma-and-and-ize-an-ienumerable-in-c-sharp)
+    string Commaize(IEnumerable<string> sequence)
+    {
+        IList<string> list = sequence as IList<string>;
+        if (list == null)
+            list = sequence.ToList();
+        if (list.Count == 0)
+            return "";
+        else if (list.Count == 1)
+            return list.First();
+        else
+            return string.Join(", ", list.Take(list.Count - 1).ToArray()) + " and " + list.Last();
     }
 }
