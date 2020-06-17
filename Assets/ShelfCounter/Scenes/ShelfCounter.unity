@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000012, guid: 5eabfbaa75822794b8c8795ed90fc011,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -269,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a314929406e6c5489ebd9e939ad75cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: d3b6d4510d7f4f843bb948efcf8ec521, type: 2}
+  data: {fileID: 11400000, guid: 7849d0c758bd59a42ac2b30533c68621, type: 2}
 --- !u!1 &66862794
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ GameObject:
   - component: {fileID: 66862795}
   - component: {fileID: 66862799}
   m_Layer: 0
-  m_Name: Item (2)
+  m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a314929406e6c5489ebd9e939ad75cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: c86a43f3f9ff3894292aee8f7a335856, type: 2}
+  data: {fileID: 11400000, guid: 2a09f11a70a95344f81359a2ddd5a22c, type: 2}
 --- !u!1 &73860686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +1972,7 @@ GameObject:
   - component: {fileID: 900043807}
   - component: {fileID: 900043811}
   m_Layer: 0
-  m_Name: Item
+  m_Name: Banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2056,7 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a314929406e6c5489ebd9e939ad75cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 2a09f11a70a95344f81359a2ddd5a22c, type: 2}
+  data: {fileID: 11400000, guid: c86a43f3f9ff3894292aee8f7a335856, type: 2}
 --- !u!1 &905034193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,7 +2986,7 @@ GameObject:
   - component: {fileID: 1250827415}
   - component: {fileID: 1250827419}
   m_Layer: 0
-  m_Name: Item (3)
+  m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3070,7 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a314929406e6c5489ebd9e939ad75cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 2a09f11a70a95344f81359a2ddd5a22c, type: 2}
+  data: {fileID: 11400000, guid: d3b6d4510d7f4f843bb948efcf8ec521, type: 2}
 --- !u!1 &1268040876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,8 +3981,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: -20, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533261617
 MonoBehaviour:
@@ -4003,7 +4004,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: abf0b8e486c60614594571d0a0470348, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -5056,7 +5057,7 @@ GameObject:
   - component: {fileID: 1962681960}
   - component: {fileID: 1962681964}
   m_Layer: 0
-  m_Name: Item (1)
+  m_Name: MentalHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5141,7 +5142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a314929406e6c5489ebd9e939ad75cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: d3b6d4510d7f4f843bb948efcf8ec521, type: 2}
+  data: {fileID: 11400000, guid: 7849d0c758bd59a42ac2b30533c68621, type: 2}
 --- !u!1 &1972027330
 GameObject:
   m_ObjectHideFlags: 0
