@@ -950,13 +950,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bca4eab5005248599f229335afda9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 859858618}
+  material: {fileID: 1389636099}
   FXAAMat: {fileID: 0}
-  LutContribution: 0
-  LutMode: 13
+  LutContribution: 0.236
+  LutMode: 3
   PaintRadius: 0
   PaintBlurLevel: 0
-  LookupTexture: {fileID: 2800000, guid: 605d3e9c535774c29992a173085b1a17, type: 3}
+  LookupTexture: {fileID: 2800000, guid: be5728ba28171444e8193ce8b7b76ce1, type: 3}
   PixelSize: 1
   CelCuts: 255
   BasicSettings:
@@ -992,10 +992,10 @@ MonoBehaviour:
     DepthMult: 1
     DepthBias: 1
   ScanlineSettings:
-    Contribution: 0.079
-    Color: {r: 1, g: 1, b: 1, a: 1}
+    Contribution: 0
+    Color: {r: 0, g: 0, b: 1, a: 1}
     ScanlineX: 0
-    ScanlineY: 3
+    ScanlineY: 0
   FXAASettings:
     Enable: 0
     SubpixelBlending: 1
@@ -1305,26 +1305,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 831493718}
---- !u!21 &859858618
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/FMColor
-  m_Shader: {fileID: 4800000, guid: ff8efdd52694d4f0091d5d6e468fac4c, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats: []
-    m_Colors: []
 --- !u!1 &862335532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,6 +2348,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   filled: 0
   current: {fileID: 0}
+--- !u!21 &1389636099
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/FMColor
+  m_Shader: {fileID: 4800000, guid: ff8efdd52694d4f0091d5d6e468fac4c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &1452654483
 Prefab:
   m_ObjectHideFlags: 0
