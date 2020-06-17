@@ -37,6 +37,10 @@ public class Register : Interactable {
     {
         //create dialogue scene by building it from dialogue segments
         DialogueManager dialogue = FindObjectOfType<DialogueManager>();
+
+        //avoid dialogue while in dialogue
+        if (dialogue.inDialogue) return;
+
         DialogueSegment segment1 = new DialogueSegment("You need to add something to the counter first.");
         DialogueSegment segment2 = new DialogueSegment("Click the items in the shelf on the left to add them.");
 
@@ -53,6 +57,10 @@ public class Register : Interactable {
     /// </summary>
     private void BuildPurchaseString()
     {
+        //exit early: avoid dialogue when in dialogue
+        DialogueManager dialogue = FindObjectOfType<DialogueManager>();
+        if (dialogue.inDialogue) return;
+
         //get total cost
         Counter counter = FindObjectOfType<Counter>();
         float totalPrice = counter.GetTotalCost();
@@ -77,7 +85,6 @@ public class Register : Interactable {
         
 
         //create dialogue scene by building it from dialogue segments
-        DialogueManager dialogue = FindObjectOfType<DialogueManager>();
         DialogueSegment segment1 = new DialogueSegment(purchases);
         DialogueSegment segment2 = new DialogueSegment(costString);
 
@@ -95,6 +102,10 @@ public class Register : Interactable {
     {
         //create dialogue scene by building it from dialogue segments
         DialogueManager dialogue = FindObjectOfType<DialogueManager>();
+        
+        //avoid dialogue while in dialogue
+        if (dialogue.inDialogue) return;
+
         DialogueSegment segment1 = new DialogueSegment("You can only have five items at once.");
         DialogueSegment segment2 = new DialogueSegment("Please remove an item on the counter by clicking on it.");
 

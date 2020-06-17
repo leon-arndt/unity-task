@@ -128,6 +128,15 @@ public class DialogueManager : MonoBehaviour
     {
         listeningForSkips = true;
     }
+
+    /// <summary>
+    /// Handy getter to avoid triggering dialogue multiple times
+    /// </summary>
+    /// <returns></returns>
+    public bool InDialogue()
+    {
+        return inDialogue;
+    }
 }
 
 #region Data
