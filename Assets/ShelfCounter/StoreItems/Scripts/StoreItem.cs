@@ -25,9 +25,20 @@ public class StoreItem : Interactable {
         CounterSlot free = counter.GetFirstEmptySlot();
 
         //fill previous free CounterSlot
-        free.SetFilled(true);
+        free.Set(this);
 
-        //move to position
-        transform.position = free.transform.position;
+        //create a copy at position
+        GameObject copy = Instantiate(gameObject);
+        copy.AddComponent<ItemCopy>();
+        copy.GetComponent<ItemCopy>().SetCounterSlot(free);
+
+        //destroy the store item component
+        Destroy(copy.GetComponent<StoreItem>());
+
+        //move the copy
+        copy.transform.position = free.transform.position;
+
+        //set parent as counter to keep hierarchy clean
+        copy.transform.parent = counter.transform;
     }
 }

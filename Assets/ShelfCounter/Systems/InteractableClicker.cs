@@ -16,30 +16,12 @@ public class InteractableClicker : MonoBehaviour
     /// <summary>
     /// Returns true when an interactable was clicked
     /// </summary>
-    /// <returns>A character was clicked</returns>
-    public static bool HandleInput()
+    public static void HandleInput()
     {
-        //No character can be clicked if the mouse is not pressed down
-        if (!Input.GetMouseButton(0))
-        {
-            return false;
-        }
-
         if (Input.GetMouseButtonDown(0))
         {
-            return TestPositionForInteractable(true);
+            TestPositionForInteractable(true);
         }
-
-        if (Input.GetMouseButton(0))
-        {
-            if (!TestPositionForInteractable(false))
-            {
-                //Debug.Log("mouse down but not on character");
-                return false;
-            }
-        }
-
-        return true;
     }
 
     public static bool TestPositionForInteractable(bool click)
@@ -50,16 +32,15 @@ public class InteractableClicker : MonoBehaviour
 
         //~0 refers to all layers
         if (Physics.Raycast(ray, out hit, 30f, ~0, QueryTriggerInteraction.Ignore))
-        //if (Physics.Raycast(ray, out hit))
         {
             //Test if interactable
-            var character = hit.transform.GetComponent<Interactable>();
-            if (character != null)
+            var interactable = hit.transform.GetComponent<Interactable>();
+            if (interactable != null)
             {
                 if (click)
                 {
-                    //handle clicked function on character
-                    character.Interact();
+                    //handle clicked function on interactable
+                    interactable.Interact();
 
                     { print("Clicked on: " + hit.transform.name); }
                 }

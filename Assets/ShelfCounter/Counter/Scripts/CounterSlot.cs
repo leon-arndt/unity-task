@@ -24,6 +24,15 @@ public class CounterSlot : MonoBehaviour {
     public void Set(StoreItem item)
     {
         current = item;
+
+        if (item == null)
+        {
+            filled = false;
+        }
+        else
+        {
+            filled = true;
+        }
     }
 
     /// <summary>
@@ -42,10 +51,5 @@ public class CounterSlot : MonoBehaviour {
     public bool GetFilled()
     {
         return filled;
-    }
-
-    public void SetFilled(bool filled)
-    {
-        this.filled = filled;
     }
 }
