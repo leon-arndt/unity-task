@@ -19,6 +19,39 @@ public class Register : Interactable {
     {
         string notifyString = string.Empty;
 
+        Counter counter = FindObjectOfType<Counter>();
+        int itemCount = counter.GetAllCurrentItems().Length;
+
+        if (itemCount == 0)
+        {
+            InformToAddItems();
+        }
+        else
+        {
+            BuildPurchaseString();
+        }
+    }
+
+    private void InformToAddItems()
+    {
+        //create dialogue scene by building it from dialogue segments
+        DialogueManager dialogue = FindObjectOfType<DialogueManager>();
+        DialogueSegment segment1 = new DialogueSegment("You need to add something to the counter first.");
+        DialogueSegment segment2 = new DialogueSegment("Click the items in the shelf on the left to add them.");
+
+        //combine the scene
+        DialogueScene scene = new DialogueScene(new DialogueSegment[] { segment1, segment2 });
+
+        //display the dialogue
+        dialogue.LoadDialogueScene(scene);
+        dialogue.EnterDialogue();
+    }
+
+    /// <summary>
+    /// Tally up all the different items
+    /// </summary>
+    private void BuildPurchaseString()
+    {
         //get total cost
         Counter counter = FindObjectOfType<Counter>();
         float totalPrice = counter.GetTotalCost();
