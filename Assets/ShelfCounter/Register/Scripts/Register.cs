@@ -65,7 +65,10 @@ public class Register : Interactable {
             purchases += item.itemName + ", ";
         }
 
-        string costString = "Which will cost you " + totalPrice + "€ alltogether.";
+        //format the price float ###,###.##
+        string formattedPrice = totalPrice.ToString("N");
+        string costString = "Which will cost you " + formattedPrice + "€ alltogether.";
+        
 
         //create dialogue scene by building it from dialogue segments
         DialogueManager dialogue = FindObjectOfType<DialogueManager>();
