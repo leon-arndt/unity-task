@@ -11,7 +11,7 @@ public class StoreItem : Interactable {
 
     public override void Interact()
     {
-        FillSlot(); 
+        HandleClick();
     }
 
     public ItemData GetData()
@@ -19,6 +19,22 @@ public class StoreItem : Interactable {
         return data;
     }
 
+    private void HandleClick()
+    {
+        Counter counter = FindObjectOfType<Counter>();
+
+        if (counter.GetAllCurrentItems().Length >= counter.GetMaxItems())
+        {
+            //if there is no space on the counter
+            Register register = FindObjectOfType<Register>();
+            register.NotifyTooManyItems();
+        }
+        else
+        {
+            //if there is space on the counter
+            FillSlot();
+        }
+    }
     public void FillSlot()
     {
         Counter counter = FindObjectOfType<Counter>();

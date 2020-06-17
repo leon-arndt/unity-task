@@ -82,4 +82,21 @@ public class Register : Interactable {
         dialogue.LoadDialogueScene(scene);
         dialogue.EnterDialogue();
     }
+    /// <summary>
+    /// Notify the player that they have placed too many items on the counter
+    /// </summary>
+    public void NotifyTooManyItems()
+    {
+        //create dialogue scene by building it from dialogue segments
+        DialogueManager dialogue = FindObjectOfType<DialogueManager>();
+        DialogueSegment segment1 = new DialogueSegment("You can only have five items at once.");
+        DialogueSegment segment2 = new DialogueSegment("Please remove an item on the counter by clicking on it.");
+
+        //combine the scene
+        DialogueScene scene = new DialogueScene(new DialogueSegment[] { segment1, segment2 });
+
+        //display the dialogue
+        dialogue.LoadDialogueScene(scene);
+        dialogue.EnterDialogue();
+    }
 }

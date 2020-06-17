@@ -64,4 +64,13 @@ public class Counter : Interactable {
         //convert to array again
         return allItems.ToArray();
     }
+
+    /// <summary>
+    /// Getter function to avoid public field
+    /// </summary>
+    /// <returns></returns>
+    public int GetMaxItems()
+    {
+        return maxItems;
+    }
 }

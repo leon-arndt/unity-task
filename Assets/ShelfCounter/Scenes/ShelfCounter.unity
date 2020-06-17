@@ -337,8 +337,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 181158214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06700001, y: 0.61, z: 0.00000023841858}
-  m_LocalScale: {x: 0.99999994, y: 0.99999744, z: 1.0000005}
+  m_LocalPosition: {x: -0.09638001, y: 0.61, z: 0.00000010430813}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 286777529}
   m_RootOrder: 2
@@ -1493,8 +1493,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 933770209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.285, y: 0.61, z: 0.00000023841858}
-  m_LocalScale: {x: 0.99999994, y: 0.99999744, z: 1.0000005}
+  m_LocalPosition: {x: 0.20624003, y: 0.61, z: 0.0000002756765}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 286777529}
   m_RootOrder: 4
@@ -1535,7 +1535,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 965355220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.419, y: 0.6099999, z: 0.00000023841858}
+  m_LocalPosition: {x: -0.399, y: 0.6099999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 286777529}
@@ -2329,8 +2329,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1330324455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.243, y: 0.60999995, z: 0.00000023841858}
-  m_LocalScale: {x: 0.99999994, y: 0.99999744, z: 1.0000005}
+  m_LocalPosition: {x: -0.24768998, y: 0.60999995, z: 0.000000018627517}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 286777529}
   m_RootOrder: 1
@@ -2968,8 +2968,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1846174773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.109, y: 0.61, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999744, z: 1.0000005}
+  m_LocalPosition: {x: 0.05492702, y: 0.61, z: -0.000000048428085}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 286777529}
   m_RootOrder: 3
