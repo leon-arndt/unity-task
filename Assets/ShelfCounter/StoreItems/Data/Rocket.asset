@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8780dc2e9c5114db359e97b91ccad7, type: 3}
   m_Name: Rocket
   m_EditorClassIdentifier: 
-  itemName: A rocket
+  itemName: a rocket
   cost: 199
