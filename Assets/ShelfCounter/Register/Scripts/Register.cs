@@ -32,7 +32,7 @@ public class Register : Interactable {
             purchases += item.itemName + ", ";
         }
 
-        string costString = "Which will cost you " + totalPrice + " alltogether.";
+        string costString = "Which will cost you " + totalPrice + "€ alltogether.";
 
         //create dialogue scene by building it from dialogue segments
         DialogueManager dialogue = FindObjectOfType<DialogueManager>();
