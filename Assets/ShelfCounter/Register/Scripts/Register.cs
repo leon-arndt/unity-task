@@ -26,6 +26,11 @@ public class Register : Interactable {
         //get items list
         string purchases = "You are going to purchase ";
 
+        ItemData[] items = counter.GetAllCurrentItems();
+        foreach (ItemData item in items)
+        {
+            purchases += item.itemName + ", ";
+        }
 
         string costString = "Which will cost you " + totalPrice + " alltogether.";
 

@@ -10,6 +10,8 @@ public class Counter : Interactable {
     [SerializeField]
     private List<CounterSlot> counterSlots = new List<CounterSlot>();
 
+    private const int maxItems = 5;
+
     public override void Interact()
     {
         base.Interact();
@@ -44,5 +46,22 @@ public class Counter : Interactable {
 
         //return last slot as fallback
         return counterSlots[counterSlots.Count - 1];
+    }
+
+    public ItemData[] GetAllCurrentItems()
+    {
+        List<ItemData> allItems = new List<ItemData>();
+
+        foreach (var item in counterSlots)
+        {
+            if (item.GetFilled())
+            {
+                ItemData itemData = item.GetStoreItem().GetData();
+                allItems.Add(itemData);
+            }
+        }
+
+        //convert to array again
+        return allItems.ToArray();
     }
 }

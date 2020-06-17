@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Used for each position on the counter
+/// Used to carry data for each position on the counter
 /// </summary>
 public class CounterSlot : MonoBehaviour {
     [SerializeField]
@@ -11,11 +11,6 @@ public class CounterSlot : MonoBehaviour {
 
     [SerializeField]
     private StoreItem current = null;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 
     /// <summary>
     /// Set the store item
@@ -41,7 +36,18 @@ public class CounterSlot : MonoBehaviour {
     /// <returns></returns>
     public float GetCost()
     {
-        return current.GetData().cost;
+        float cost = 0;
+
+        //avoid null exception
+        if (current != null)
+        {
+            if (current.GetData() != null)
+            {
+                cost = current.GetData().cost;
+            }
+        }
+
+        return cost;
     }
 
     /// <summary>
@@ -51,5 +57,15 @@ public class CounterSlot : MonoBehaviour {
     public bool GetFilled()
     {
         return filled;
+    }
+
+    /// <summary>
+    /// Get the current store item if one exists in the slot
+    /// </summary>
+    /// <returns></returns>
+    public StoreItem GetStoreItem()
+    {
+        //could be upgraded to avoid null exception
+        return current;
     }
 }

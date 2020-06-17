@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc8780dc2e9c5114db359e97b91ccad7, type: 3}
-  m_Name: Item3
+  m_Name: Banana
   m_EditorClassIdentifier: 
-  itemName: 
-  cost: 15
+  itemName: A banana
+  cost: 7
